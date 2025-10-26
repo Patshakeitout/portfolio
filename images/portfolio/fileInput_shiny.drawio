@@ -1,0 +1,22 @@
+<mxfile host="app.diagrams.net" modified="2024-04-28T20:45:05.163Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="Qe4hijj8_PJXXlzlQRQE" version="22.1.17" type="device">
+  <diagram name="Seite-1" id="_-ehRr6ZOKzXg6u2dArN">
+    <mxGraphModel dx="2138" dy="666" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MV0hTm_-UaqOjbcXD4P1-11" value="" style="group;fillColor=#3BC677;strokeColor=none;fontColor=#333333;container=0;" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="40" y="40" width="800" height="800" as="geometry" />
+        </mxCell>
+        <mxCell id="MV0hTm_-UaqOjbcXD4P1-2" value="" style="whiteSpace=wrap;html=1;aspect=fixed;imageWidth=800;imageHeight=800;imageAspect=0;resizable=1;resizeWidth=0;fillColor=#b2a9b7;strokeColor=none;container=0;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="800" height="800" as="geometry" />
+        </mxCell>
+        <mxCell id="WFUODTD_8wwCUXlMvpKL-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://solutions.posit.co/connections/db/best-practices/dashboards/dashboard.png;" vertex="1" parent="1">
+          <mxGeometry x="650" y="332.18" width="630" height="300.83" as="geometry" />
+        </mxCell>
+        <mxCell id="WFUODTD_8wwCUXlMvpKL-2" value="" style="shape=tape;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-570" y="630" width="120" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

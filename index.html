@@ -1,360 +1,1056 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
 
 <head>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Julius+Sans+One&family=Open+Sans&family=Source+Sans+Pro&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+   <title> Patrick Schauer </title>
+   <meta name="description" content="">
+   <meta name="author" content="">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+   <!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/default.css">
+   <link rel="stylesheet" href="css/layout.css">
+   <link rel="stylesheet" href="css/media-queries.css">
+   <link rel="stylesheet" href="css/magnific-popup.css">
+
+   <!-- Script
+   ================================================== -->
+   <script src="js/modernizr.js"></script>
+
+   <!-- PDF downloader 
+   ================================================== -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+
+   <!-- Favicon ================================ -->
+   <link rel="shortcut icon" href="./images/PS-logo-white_trans.png" type="image/x-icon">
+
 </head>
 
 <body>
-  <page size="A4">
-    <section class="container">
-      <aside class="leftPanel">
-        <img src="resume-image.jpg" />
-        <section class="details">
-          <section class="item bottomLineSeparator">
-            <h2>KONTAKT</h2>
-            <section class="smallText">
-              <p><i class="fa fa-phone contactIcon" aria-hidden="true"></i> (+49) 151 68125358</p>
-              <p><i class="fa fa-envelope contactIcon" aria-hidden="true"></i>
-                <a href="mailto:lorem@ipsum.com">patrick_schauer@t-online.de</a>
-              </p>
-              <p><i class="fa fa-map-marker contactIcon" aria-hidden="true"></i> Itzehoe, Deutschland</p>
-              <p><i class="fa fa-briefcase contactIcon" aria-hidden="true"></i>
-                <a href="https://www.patrickschauer.de/" target="_blank">Portfolio</a>
-              </p>
-              <p><i class="fa fa-linkedin-square contactIcon" aria-hidden="true"></i>
-                <a href="https://www.linkedin.com/in/patrick-schauer-5a369322a/" target="_blank">LinkedIn</a>
-              </p>
-              <p class="lastParagrafNoMarginBottom">
-                <i class="fa fa-github contactIcon" aria-hidden="true"></i>
-                <a href="https://github.com/Patshakeitout?tab=repositories" target="_blank">GitHub</a>
-              </p>
-            </section>
-          </section>
 
-          <section class="item bottomLineSeparator">
-            <h2>SKILLS</h2>
-            <section class="smallText">
-              <section class="skill">
-                <section><span>KI-gestütztes Coden</span></section>
-              </section>
-              <section class="skill">
-                <section><span>HTML5, CSS3</span></section>
-              </section>
-              <section class="skill">
-                <section><span>JavaScript</span></section>
-              </section>
-              <section class="skill">
-                <section><span>Python, Django</span></section>
-              </section>
-              <section class="skill">
-                <section><span>PHP</span></section>
-              </section>
-              <section class="skill">
-                <section><span>MySQL</span></section>
-              </section>
-              <section class="skill">
-                <section><span>R, R Shiny</span></section>
-              </section>
-              <section class="skill">
-                <section><span>Git</span></section>
-              </section>
-              <section class="skill">
-                <section><span>Docker</span></section>
-              </section>
-              <section class="skill">
-                <section><span>EEE-Parts-Engineering</span></section>
-              </section>
-              <section class="skill">
-                <section><span>Qualitätswesen</span></section>
-              </section>
-            </section>
-          </section>
+   <!-- Header
+   ================================================== -->
+   <header id="home">
 
-          <section class="item">
-            <h2>Ausbildung</h2>
-            <section class="smallText">
-              <p class="bolded white">Mentoring Program Studio Web</p>
-              <p class="bolded white">ab 2023</p>
-              <p>pro-Level HTML5, CSS3, Javascript / ES6, Python3, PHP8, SQL</p>
-              <p>Datenstrukturen, Algorithmen, Designpattern und Refactoring</p>
-              <p>Soft Skills</p>
-            </section>
-          </section>
-        </section>
-      </aside>
+      <nav id="nav-wrap">
 
-      <main class="rightPanel">
-        <header>
-          <h1>Patrick Schauer</h1>
-          <section class="smallText">
-            <h3>Data Engineer, Webentwickler</h3>
-          </section>
-        </header>
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+         <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
 
-        <section>
-          <h2>Über mich</h2>
-          <section class="smallText">
+         <ul id="nav" class="nav">
+            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+            <li><a class="smoothscroll" href="#about">Über mich</a></li>
+            <li><a class="smoothscroll" href="#portfolio">Projektportfolio</a></li>
+            <li><a class="smoothscroll" href="#resume">Lebenslauf</a></li>
+            <li><a class="smoothscroll" href="#testimonials">Zitate</a></li>
+            <!-- <li><a class="smoothscroll" href="#contact">Contact</a></li>-->
+         </ul> <!-- end #nav -->
+
+      </nav> <!-- end #nav-wrap -->
+
+      <div class="row banner">
+         <div class="banner-text">
+            <h1 class="responsive-headline" style="font-size: 50px;">Patrick Schauer</h1>
+            <h3 class="responsive-headline">
+               <p>
+                  Ich bin ein in Itzehoe lebender <span>Physiker</span> und <span>Webentwickler</span>,
+                  der datengetriebene Anwendungen mit modernen <span>Frontend-Frameworks</span> 
+                  und klarer <span>Architektur</span> realisiert.
+               </p>
+            </h3>
+         </div>
+      </div>
+
+      <p class="scrolldown">
+         <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+      </p>
+
+   </header> <!-- Header End -->
+
+   <!-- About Section
+   ================================================== -->
+   <section id="about">
+
+      <div class="row">
+
+         <div class="three columns" id="pictureSocial">
+            <img class="profile-pic" src="images/ich.jpg" alt="" />
+            <ul class="social">
+               <li><a href="https://www.xing.com/profile/Patrick_Schauer4/web_profiles?expandNeffi=true"><i
+                        class="fa fa-xing"></i></a></li>
+               <li><a href="https://www.linkedin.com/in/patrick-schauer-5a369322a/"><i class="fa fa-linkedin"></i></a>
+               </li>
+               <li><a href="https://github.com/Patshakeitout?tab=repositories"><i class="fa fa-github"></i></a></li>
+            </ul>
+         </div>
+
+         <div class="nine columns main-col">
+            <h2>Über mich</h2>
             <p>
-              Ich bin ein erfahrener **Full-Stack Softwareentwickler** mit einer besonderen **Vorliebe für das Frontend**,
-              der mit Leidenschaft Probleme mittels Code löst und dabei auch **KI-gestütztes Coden** einsetzt.
-              Meine Expertise erstreckt sich über die Bereiche **Datenengineering und Webentwicklung**,
-              und meine analytischen Fähigkeiten werden durch meinen Hintergrund als **Physiker** gestärkt.
+               Alle Menschen wollen in freier Entfaltung etwas gestalten und kreieren. <br>
+               Seit geraumer Zeit habe ich meine Leidenschaft vor allem in der Webentwicklung gefunden.
+               Dabei schreibe ich gerne Apps, die Dinge automatisieren mit UX, die Freude macht.
+               Analytische Schärfe, sportlicher Ehrgeiz, Weitblick und eine kreative Herangehensweise helfen mir,
+               Bugs zu beheben. Meine Applikationen sollen nicht nur funktionieren, sondern auch faszinieren und
+               begeistern.
             </p>
-          </section>
-        </section>
 
-        <section class="workExperience">
-          <h2>Berufserfahrung</h2>
-          <ul>
-            <li>
-              <section class="jobPosition">
-                <span class="bolded">Dateningenieur, Softwareentwickler</span>
-                <span>ab Sep 2021</span>
-              </section>
-              <section class="projectName bolded">
-                <span>
-                  <i>Customcells Holding GmbH • Itzehoe</i>
-                </span>
-              </section>
-              <section class="smallText">
-                <ul>
-                  <li>Webentwicklung (Full-Stack) für Datenaggregation und Dashboards (interaktive Dashboards, Webformulare)</li>
-                  <li>Betreuung und Weiterentwicklung eines MES</li>
-                  <li>Aufbau von ETL-Strecken und Datawarehouse</li>
-                  <li>Aufbau und Nutzung von RESTful-Webservices, Maschinenanbindung und IoT</li>
-                  <li>Datenanalyse</li>
-                </ul>
-                <p><span class="bolded">Skills: </span>R, R Shiny, MySQL, PHP, Python, Django, HTML5, CSS3, JavaScript,
-                  Git, Docker</p>
-              </section>
-            </li>
-            <li>
-              <section class="jobPosition">
-                <span class="bolded">MES-Prozessingenieur</span>
-                <span>Nov 2019 - Sep 2021</span>
-              </section>
-              <section class="projectName bolded">
-                <span>
-                  <i>Fraunhofer Institut für Siliziumtechnologie ISIT • Itzehoe</i>
-                </span>
-              </section>
-              <section class="smallText">
-                <ul>
-                  <li>MES Datenverarbeitung und Dashboardentwicklung (Produktion/Controlling)</li>
-                  <li>Modellierung und Konzeptionierung des neuen MES</li>
-                  <li>Administration, UI-Entwicklung im MES</li>
-                  <li>SQL-Queries und Betreuung des bestehenden MES</li>
-                </ul>
-                <p><span class="bolded">Skills: </span>R, R Shiny, SQL, Excel-VBA, Oracle</p>
-              </section>
-            </li>
-            <li>
-              <section class="jobPosition">
-                <span class="bolded">Testingenieur</span>
-                <span>Jun 2019 - Nov 2019</span>
-              </section>
-              <section class="projectName bolded">
-                <span>
-                  <i>Brämer Elektroplanung GmbH bei Philips Medical • Hamburg</i>
-                </span>
-              </section>
-              <section class="smallText">
-                <ul>
-                  <li>Unterstützung entwicklungsbegleitender Tests und Verifikation (Röntgenstrahler)</li>
-                  <li>Test- und Verifikationsdokumentation, toolbasierte CT-Datenanalyse</li>
-                  <li>Teilnahme an Scrum-Events</li>
-                </ul>
-                <p><span class="bolded">Skills: </span>Test- und Qualitätsdokumentation, Datenanalyse, Testdurchführung,
-                  Excel</p>
-              </section>
-            </li>
-            <li>
-              <section class="jobPosition">
-                <span class="bolded">Qualitätsingenieur für EEE-Bauteile</span>
-                <span>Mar 2017 - Mai 2019</span>
-              </section>
-              <section class="projectName bolded">
-                <span>
-                  <i>OHB System AG • Bremen</i>
-                </span>
-              </section>
-              <section class="smallText">
-                <ul>
-                  <li>Ansprechpartner für EEE-Angelegenheiten (intern/extern)</li>
-                  <li>Software-Konzeption, Datenbankdesign und Anwendertests</li>
-                  <li>Genehmigung von Part Approval Documents (PAD) und Bauteillisten</li>
-                  <li>Sicherstellen der (Design)-Qualität (MIL, ESCC) in Satellitenprojekten</li>
-                </ul>
-                <p><span class="bolded">Skills: </span>EEE-Engineering, MIL/ESCC-Normen, Datenanalyse, Excel,
-                  Datenbankdesign, Projektmanagement, Lieferantenmanagement</p>
-              </section>
-            </li>
-            <li>
-              <section class="jobPosition">
-                <span class="bolded">Prozessingenieur Technologietransfer/-integration</span>
-                <span>Jul 2014 - Dez 2016</span>
-              </section>
-              <section class="projectName bolded">
-                <span>
-                  <i>Vishay Siliconix Itzehoe GmbH • Itzehoe</i>
-                </span>
-              </section>
-              <section class="smallText">
-                <ul>
-                  <li>Transfer neu entwickelter PowerMOS-Transistoren</li>
-                  <li>Analyse von Prozessinstabilitäten (SPC) und Yield-Ausfällen</li>
-                </ul>
-                <p><span class="bolded">Skills: </span>Process-Engineering, Datenanalyse</p>
-              </section>
-            </li>
-            <li>
-              <section class="jobPosition">
-                <span class="bolded">Design Assurance Quality Engineer ‐ Aerospace</span>
-                <span>Sep 2013 - Juni 2014</span>
-              </section>
-              <section class="projectName bolded">
-                <span>
-                  <i>Rockwell Collins Deutschland GmbH • März 2010 - August 2013 • Heidelberg</i>
-                </span>
-              </section>
-              <section class="smallText">
-                <ul>
-                  <li>Unterstützung des Engineerings bzgl. Design Assurance und Qualität</li>
-                  <li>Verifikation von Entwicklungsaktivitäten und Produkten, Risikoanalyse</li>
-                </ul>
-                <p><span class="bolded">Skills: </span>EEE-Engineering, MIL/ESCC-Normen, Datenanalyse, Excel,
-                  Datenbankdesign, Lieferanten- und Qualitätsmanagement</p>
-              </section>
-            </li>
-            <li>
-              <section class="jobPosition">
-                <span class="bolded">Produktqualitätsingenieur ‐ Raumfahrt</span>
-                <span>Mar 2010 - Aug 2013</span>
-              </section>
-              <section class="projectName bolded">
-                <span>
-                  <i>Rockwell Collins Deutschland GmbH • Heidelberg</i>
-                </span>
-              </section>
-              <section class="smallText">
-                <ul>
-                  <li>Bearbeitung von Kundenanfragen zur EEE-Bauteilqualifikation</li>
-                  <li>Mitarbeit in Lean-Projekten (EEE-Bauteillisten, PAD-DB)</li>
-                  <li>Kooperation mit Einkauf und interne/externe Reviews</li>
-                </ul>
-                <p><span class="bolded">Skills: </span>EEE-Engineering, MIL/ESCC-Normen, Datenanalyse, Excel,
-                  Datenbankdesign, Projektmanagement, Lieferantenmanagement</p>
-              </section>
-            </li>
-            <li>
-              <section class="jobPosition">
-                <span class="bolded">Projektingenieur - Product Assurance Space</span>
-                <span>Sep 2009 - Feb 2010</span>
-              </section>
-              <section class="projectName bolded">
-                <span>
-                  <i>Hays Temp GmbH • Heidelberg</i>
-                </span>
-              </section>
-              <section class="smallText">
-                <ul>
-                  <li>Erstellen von Bauteillisten und Dokumentation für Kundenabnahmen</li>
-                  <li>Prüfung und Aktualisierung von Part Approval Documents (PADs)</li>
-                </ul>
-                <p><span class="bolded">Skills: </span>EEE-Engineering, MIL/ESCC-Normen, Datenanalyse, Excel</p>
-              </section>
-            </li>
-            <li>
-              <section class="jobPosition">
-                <span class="bolded">Yield-Ingenieur</span>
-                <span>Jun 2007 - Mar 2009</span>
-              </section>
-              <section class="projectName bolded">
-                <span>
-                  <i>NXP Semiconductors Germany GmbH • Hamburg</i>
-                </span>
-              </section>
-              <section class="smallText">
-                <ul>
-                  <li>Projektmitarbeit zur Ausbeutesteigerung und Kostenreduktion</li>
-                  <li>Volume-Ramp-Up neuer Produkte und Technologien</li>
-                  <li>Analyse, Visualisierung und Aufbereitung von Yield- und Prozessdaten</li>
-                </ul>
-                <p><span class="bolded">Skills: </span>Yield-Engineering, Prozess- u. Testengineering, Excel-VBA</p>
-              </section>
-            </li>
-            <li>
-              <section class="jobPosition">
-                <span class="bolded">Luftfahrzeugelektroniker</span>
-                <span>Mai 1999 - Apr 2002</span>
-              </section>
-              <section class="projectName bolded">
-                <span>
-                  <i>Marinefliegergeschwader 5, Bundeswehr • Kiel</i>
-                </span>
-              </section>
-              <section class="smallText">
-                <ul>
-                  <li>Instandsetzung, Wartung und Überprüfung von Fernmeldeanlagen</li>
-                  <li>Mitarbeit in der Betriebsorganisation / Datenauswertung</li>
-                </ul>
-                <p><span class="bolded">Skills: </span>Funk/Navigation Sea King MK41, Prüfabnahme und Test</p>
-              </section>
-            </li>
-          </ul>
-        </section>
-      </main>
-    </section>
-  </page>
+            <div class="row">
+               <div class="columns contact-details">
+                  <h2> Kontakt </h2>
+                  <p class="address">
+                     <span> Patrick Schauer, verheiratet, 2 Kinder </span> <br>
+                     <span> patrick_schauer@t-online.de </span>
+                  </p>
 
-  <page size="A4">
-    <section class="container">
-      <aside class="leftPanel">
-        <section class="smallText">
-          <p class="bolded white">Christian-Albrechts-Universität, Kiel</p>
-          <p class="bolded white">Diplom-Physiker</p>
-          <p class="bolded white">Mai 2002 - Mai 2007</p>
-          <p>Hochschulstudium der Physik (Diplom)</p>
-          <p>Schwerpunkte: Festkörper- und Halbleiterphysik, Halbleiterelektrochemie, Mathematik</p>
-        </section>
+               </div>
 
-        <section class="smallText">
-          <p class="bolded white">Marinetechnikschule, Westerland</p>
-          <p class="bolded white">Luftfahrzeugselektroniker MK41</p>
-          <p class="bolded white">October 1998 - April 1999</p>
-          <p>Grundlagen Aerodynamik, Triebwerkstechnik, Avionik, Radar-/Ortungsanlagen (Sea King MK41)</p>
-        </section>
 
-        <section class="smallText">
-          <p class="bolded white">Marineunteroffiziersschule, Plön</p>
-          <p class="bolded white">Maat</p>
-          <p class="bolded white">April 1997 - Juni 1997</p>
-          <p>Militärisches Vorgesetztentraining und Ausbildung zum Maaten (Unteroffizier Marine)</p>
-        </section>
-        <section class="smallText">
-          <p class="bolded white">Marineoperationsschule, Bremerhaven</p>
-          <p class="bolded white">Kommunikationselektroniker (FA)</p>
-          <p class="bolded white">Jul 1996 - Sep 1998</p>
-          <p>Zivil anerkannte Ausbildung zum Kommunikationselektroniker (Funktechnik)</p>
-        </section>
-        <section class="smallText">
-          <p class="bolded white">Goethe-Gymnasium, Auerbach</p>
-          <p class="bolded white">Abitur</p>
-          <p class="bolded white">Sep 1992 - Jul 1996</p>
-        </section>
+               <div class="columns download">
+                  <p>
+                     <a href="#" class="button"><i class="fa fa-download"></i>Download Lebenslauf</a>
+                  </p>
+               </div>
 
-      </aside>
-      <main class="rightPanel">
-        </main>
-    </section>
-  </page>
+            </div> <!-- end row -->
+
+         </div> <!-- end .main-col -->
+
+      </div>
+
+   </section> <!-- About Section End-->
+
+   <!-- Portfolio Section ============== -->
+   <section id="portfolio">
+      <div class="row">
+
+         <div class="twelve columns collapsed">
+
+            <h1> Ein Auszug meiner Projekte. </h1>
+
+            <!-- portfolio-wrapper -->
+            <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
+
+               <div class="columns portfolio-item">
+                  <a href="https://patrickschauer.de/infraviz" target="_blank" title="Infraviz">
+                     <div class="item-wrap">
+                        <img alt="Infraviz" src="images/portfolio/infraviz.png">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+                              <h5>Infraviz</h5>
+                              <p>Visualisierung deutscher InfraGO-Objekte </p>
+                              <p>Tech-Stack: Angular · TypeScript · RxJS · Material UI · Leaflet Maps · Overpass API · Reactive Design</p>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+               <div class="columns portfolio-item">
+                  <a href="https://susanneschauer.de" target="_blank" title="Zur BabyBond Webseite">
+                     <div class="item-wrap">
+                        <img alt="BabyBond Webseite" src="images/portfolio/LOGO-STILL Rund.jpg">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+                              <h5>BabyBond</h5>
+                              <p>Website Stillbegleitung und Trageberatung</p>
+                              <p>Tech-Stack: Angular · TypeScript · Modular Routing · Material · Breadcrumbs</p>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+               <div class="columns portfolio-item">
+                     <div class="item-wrap">
+                        <img alt="BabyBond Webseite" src="images/portfolio/coating.png">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+                              <h5>Dashboard - Coating process</h5>
+                              <p>ETL and Dashboard for Coating Process</p>
+                              <p>Tech-Stack: ETL (WebDAV to MySQL) · FastAPI · R Shiny · Plotly · (React)</p>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+                     <img alt="" src="images/portfolio/django.png">
+                     <div class="overlay">
+                        <div class="portfolio-item-meta">
+                           <h5>Produktentstehungsprozess</h5>
+                           <p>Webformulare zur Datenaggregation </p>
+                           <p>Dashboard</p>
+                           <p>Tech-Stack: Django, plotly</p>
+                        </div>
+                     </div>
+                     <!--<div class="link-icon"><i class="icon-plus"></i></div>--->
+                  </div>
+               </div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <img alt="" src="images/portfolio/climate_monitoring.png">
+                     <div class="overlay">
+                        <div class="portfolio-item-meta">
+                           <h5>Klimadatenüberwachung</h5>
+                           <p> OPC UA / modBus Datenpipelines </p>
+                           <p> Shiny-Dashboard (multi-page)</p>
+                           <p> TechStack: node-RED, R-Shiny </p>
+                        </div>
+                        <!--
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                        -->
+                     </div>
+
+                  </div>
+               </div> <!-- item end -->
+
+               <!--
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <img alt="" src="images/portfolio/fileInput_shiny.png">
+                     <div class="overlay">
+                        <div class="portfolio-item-meta">
+                           <h5> Datenauswertung </h5>
+                           <p> Shiny-Applikation mit multi-csv-Fileinput </p>
+                           <p> Tech-Stack: R-Shiny </p>
+                        </div>
+                     </div>
+
+                  </div>
+               </div> -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <img alt="" src="images/portfolio/projectProgress.png">
+                     <div class="overlay">
+                        <div class="portfolio-item-meta">
+                           <h5> Projektfortschritt </h5>
+                           <p> Shiny-Dashboard zum Tracken von Projektkosten </p>
+                           <p> Tech-Stack: R-Shiny</p>
+                        </div>
+                     </div>
+                     <!---
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                        -->
+
+                  </div>
+               </div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <img alt="" src="images/portfolio/webForm_php.png">
+                     <div class="overlay">
+                        <div class="portfolio-item-meta">
+                           <h5> Webformular Zellproduktion </h5>
+                           <p> interaktives Webformular der Qualitätssicherung </p>
+                           <p> Tech Stack: php, XAMPP </p>
+                        </div>
+                     </div>
+
+                  </div>
+               </div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <img alt="" src="images/portfolio/SAPCC.png">
+                     <div class="overlay">
+                        <div class="portfolio-item-meta">
+                           <h5> REST-API für SAP-BCP </h5>
+                           <p> REST-API, um on-premise-Daten über den SAP-Cloud-Connector an die SAP-BCP zu senden.
+                           </p>
+                           <p> node.js </p>
+
+                        </div>
+                     </div>
+                     <!--
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                        -->
+
+                  </div>
+               </div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <img alt="" src="images/portfolio/ETL_Feuchtemessgeraet.png">
+                     <div class="overlay">
+                        <div class="portfolio-item-meta">
+                           <h5> ETL Feuchtemessgerät </h5>
+                           <p> ETL (Rest) und Shiny-Dashboard </p>
+                           <p> Tech-Stack: R und Shiny </p>
+                        </div>
+                     </div>
+
+                  </div>
+               </div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <img alt="" src="images/portfolio/node-RED_webscraping.png">
+                     <div class="overlay">
+                        <div class="portfolio-item-meta">
+                           <h5> Datenpipeline mit Webscraping </h5>
+                           <p> node-RED OPC-UA-API Datenpipeline </p>
+                           <p> Tech-Stack: node.js, OPC-UA Methode, node-RED, MySQL </p>
+                        </div>
+                     </div>
+
+                  </div>
+               </div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <img alt="" src="images/portfolio/ETL_py.png">
+                     <div class="overlay">
+                        <div class="portfolio-item-meta">
+                           <h5> ETL Python </h5>
+                           <p> lokales Backup to MySQL </p>
+                           <p> Tech-Stack: python </p>
+                        </div>
+                     </div>
+
+                  </div>
+               </div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <img alt="" src="images/portfolio/FAB-FF.png">
+                     <div class="overlay">
+                        <div class="portfolio-item-meta">
+                           <h5> FAB-Flussfaktor </h5>
+                           <p> Flussfaktor-Verteilung aus MES-DB </p>
+                           <p> Dashboard </p>
+                           <p> Tech-Stack: RShiny </p>
+                        </div>
+                     </div>
+
+                  </div>
+               </div> <!-- item end -->
+
+            </div> <!-- portfolio-wrapper end -->
+
+         </div> <!-- twelve columns end -->
+
+
+         <!-- Modal Popup
+	      --------------------------------------------------------------- -->
+
+         <div id="modal-01" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/portfolio/modals/m-coffee.jpg" alt="" />
+
+            <div class="description-box">
+               <h4>Coffee Cup</h4>
+               <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                  elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
+            </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net" target="_blank">Details</a>
+               <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+         </div><!-- modal-01 End -->
+
+         <div id="modal-02" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/portfolio/modals/m-console.jpg" alt="" />
+
+            <div class="description-box">
+               <h4>Console</h4>
+               <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                  elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding, Web Development</span>
+            </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net" target="_blank">Details</a>
+               <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+         </div><!-- modal-02 End -->
+
+         <div id="modal-03" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/portfolio/modals/m-judah.jpg" alt="" />
+
+            <div class="description-box">
+               <h4>Judah</h4>
+               <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                  elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding</span>
+            </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net" target="_blank">Details</a>
+               <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+         </div><!-- modal-03 End -->
+
+         <div id="modal-04" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/portfolio/modals/m-intothelight.jpg" alt="" />
+
+            <div class="description-box">
+               <h4>Into the Light</h4>
+               <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                  elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Photography</span>
+            </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net" target="_blank">Details</a>
+               <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+         </div><!-- modal-04 End -->
+
+         <div id="modal-05" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/portfolio/modals/m-farmerboy.jpg" alt="" />
+
+            <div class="description-box">
+               <h4>Farmer Boy</h4>
+               <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                  elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
+            </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net" target="_blank">Details</a>
+               <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+         </div><!-- modal-05 End -->
+
+         <div id="modal-06" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/portfolio/modals/m-girl.jpg" alt="" />
+
+            <div class="description-box">
+               <h4>Girl</h4>
+               <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                  elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Photography</span>
+            </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net" target="_blank">Details</a>
+               <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+         </div><!-- modal-06 End -->
+
+         <div id="modal-07" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/portfolio/modals/m-origami.jpg" alt="" />
+
+            <div class="description-box">
+               <h4>Origami</h4>
+               <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                  elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding, Illustration</span>
+            </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net" target="_blank">Details</a>
+               <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+         </div><!-- modal-07 End -->
+
+         <div id="modal-08" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/portfolio/modals/m-retrocam.jpg" alt="" />
+
+            <div class="description-box">
+               <h4>Retrocam</h4>
+               <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                  elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Webdesign, Photography</span>
+            </div>
+
+            <div class="link-box">
+               <a href="http://www.behance.net" target="_blank">Details</a>
+               <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+         </div><!-- modal-01 End -->
+
+
+      </div> <!-- row End -->
+   </section> <!-- Portfolio Section End -->
+
+   <!-- Resume Section
+   ================================================== -->
+   <section id="resume">
+
+      <!-- Skills
+      ----------------------------------------------- -->
+      <div class="row skill">
+
+         <div class="two columns header-col">
+            <h1><span> Skills </span></h1>
+         </div>
+
+         <div class="four columns main-col">
+
+            <p>
+            </p>
+
+            <div class="bars">
+               <ul class="skills">
+                  <li><span class="bar-expand html5"></span><em> HTML5 </em></li>
+                  <li><span class="bar-expand css3"></span><em> CSS3 </em></li>
+                  <li><span class="bar-expand javascript"></span><em> Javascript / nodeJS</em></li>
+                  <li><span class="bar-expand python3"></span><em> Python3 </em></li>
+                  <li><span class="bar-expand django"></span><em> django </em></li>
+                  <li><span class="bar-expand R"></span><em> R / Shiny </em></li>
+
+               </ul>
+            </div>
+
+         </div>
+
+         <div class="four columns main-col">
+
+            <p>
+            </p>
+
+            <div class="bars">
+               <ul class="skills">
+                  <li><span class="bar-expand php"></span><em> PHP </em></li>
+                  <li><span class="bar-expand sql"></span><em> MySQL, MS SQL </em></li>
+                  <li><span class="bar-expand node-RED"></span><em> node-RED </em></li>
+                  <li><span class="bar-expand git"></span><em> Git </em></li>
+                  <li><span class="bar-expand docker"></span><em> Docker </em></li>
+                  <li><span class="bar-expand devops"></span><em> DevOps </em></li>
+               </ul>
+            </div>
+
+         </div>
+
+      </div> <!-- End skills -->
+
+      <!-- Education
+      ----------------------------------------------- -->
+      <div class="row education">
+
+         <div class="three columns header-col">
+            <h1><span>Ausbildung </span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3>Mentoring Program Studio Web</h3>
+                  <p class="info"> <em class="date">ab 2023</em> </p>
+
+                  <p>
+                  <dl class="dictionary-style">
+                     <dd>pro-Level HTML5, CSS3, Javascript / ES6, Python3, PHP8, SQL</dd>
+                     <dd>Datenstrukturen, Algorithmen, Designpattern und Refactoring</dd>
+                     <dd>Soft Skills</dd>
+                  </dl>
+                  </p>
+
+               </div>
+            </div> <!-- item end -->
+
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3>Christian-Albrechts-Universität</h3>
+                  <p class="info">Diplom-Physiker
+                     <span>&bull;</span> <em class="date">Mai 2002 - Mai 2007</em>
+                     <span>&bull;</span> <em class="date">Kiel</em>
+                  </p>
+                  <p>
+                  <dl class="dictionary-style">
+                     <dt><b>Hochschulstudium der Physik (Diplom), Abschlussnote: &ndash;GUT&ndash;</b></dt>
+                     <dd>Diplomarbeit:
+                        <i>„Optimierung und Charakterisierung elektrochemisch
+                           hergestellter Porenstrukturen auf lithographisch
+                           vorstrukturierten Oberflächen von III/V-Halbleitern”
+                        </i>
+                     </dd>
+                  </dl>
+                  <dl class="dictionary-style">
+                     <dd>Festkörperphysik, Halbleiterphysik u. –elektrochemie</dd>
+                     <dd>Mathematik</dd>
+                  </dl>
+                  </p>
+               </div>
+            </div> <!-- item end -->
+
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3>Marinetechnikschule</h3>
+                  <p class="info">Luftfahrzeugselektroniker Sea King MK41
+                     <span>&bull;</span> <em class="date">October 1998 - April 1999 </em>
+                     <span>&bull;</span> <em class="date">Westerland </em>
+                  </p>
+                  <p>
+                  <dl class="dictionary-style">
+                     <dd>Grundlagen Aerodynamik, Triebwerkstechnik</dd>
+                     <dd>Grundlagen Avionik</dd>
+                     <dd>Radar-/Ortungsanlagen Sea King MK41</dd>
+                  </dl>
+                  </p>
+               </div>
+            </div> <!-- item end -->
+
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3>Marineunteroffiziersschule</h3>
+                  <p class="info">Maat
+                     <span>&bull;</span> <em class="date">Juni 1997 - April 1997</em>
+                     <span>&bull;</span> <em class="date">Plön</em>
+                  </p>
+                  <p>
+                  <dl class="dictionary-style">
+                     <dd>militärisches Vorgesetztentraining und Ausbildung zum Maaten (Unteroffizier Marine)</dd>
+                  </dl>
+                  </p>
+               </div>
+            </div> <!-- item end -->
+
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3>Marineoperationsschule</h3>
+                  <p class="info">Kommunikationselektroniker (FA)
+                     <span>&bull;</span> <em class="date">Juli 1996 - September 1998</em>
+                     <span>&bull;</span> <em class="date">Bremerhaven</em>
+                  </p>
+                  <p>
+                  <dl class="dictionary-style">
+                     <dd> zivil anerkannte Ausbildung zum Kommunikationselektroniker (Funktechnik) </dd>
+                  </dl>
+                  </p>
+               </div>
+            </div> <!-- item end -->
+
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3>Goethe-Gymnasium</h3>
+                  <p class="info">Abitur
+                     <span>&bull;</span> <em class="date">September 1992 - Juni 1996</em>
+                     <span>&bull;</span> <em class="date">Auerbach (Vogtl.)</em>
+                  </p>
+               </div>
+            </div> <!-- item end -->
+
+         </div> <!-- main-col end -->
+
+      </div> <!-- End Education -->
+
+
+      <!-- Work ----------------------------------- -->
+      <div class="row work">
+         <div class="three columns header-col">
+            <h1><span>Berufserfahrung</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3> Data Engineer / Software-Entwickler </h3>
+                  <p class="info"> Custom Cells Itzehoe GmbH
+                     <span>&bull;</span> <em class="date">ab September 2021</em>
+                     <span>&bull;</span> <em class="date">Itzehoe</em>
+                  </p>
+                  <p>
+                  <dl class="dictionary-style">
+                     <dd> Webentwicklung (Full-Stack) für Datenaggregation und Dashboards </dd>
+                     <dd> Aufbau von ETL-pipelines und Datawarehouse </dd>
+                     <dd> REST-APIs </dd>
+                     <dd> Maschinenanbindung und IoT </dd>
+                     <dd> Datenanalyse </dd>
+                  </dl>
+                  </p>
+               </div>
+            </div> <!-- item end -->
+
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3> MES-Prozessingenieur </h3>
+                  <p class="info">Fraunhofer Institut für Siliziumtechnologie ISIT
+                     <span>&bull;</span> <em class="date">November 2019 - August 2021</em>
+                     <span>&bull;</span> <em class="date">Itzehoe</em>
+                  </p>
+                  <p>
+                  <dl class="dictionary-style">
+                     <dd> Betreuung des bestehenden und Weiterentwicklung des neuen MES </dd>
+                     <dd> Durchführung von produktionsrelevanten SQL-Queries am Legacy-MES </dd>
+                     <dd> Datenverarbeitung und Single-Page-Applikationen für monatliches Controlling </dd>
+                     <dd> Freigabe und Aktivierung von Produktflows im Legacy-MES </dd>
+                  </dl>
+                  </p>
+               </div>
+            </div> <!-- item end -->
+
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3>Testingenieur </h3>
+                  <p class="info">Brämer Elektroplanung GmbH bei Philips Medical
+                     <span>&bull;</span> <em class="date">Juni 2019 - November 2019</em>
+                     <span>&bull;</span> <em class="date">Hamburg</em>
+                  </p>
+                  <p>
+                  <dl class="dictionary-style">
+                     <dd> Unterstützung von entwicklungsbegleitenden Tests an Röntgenstrahlern </dd>
+                     <dd> Test- und Verifikationsdokumentation </dd>
+                     <dd> toolbasierte CT-Datenanalyse und Unterstützung R&D </dd>
+                     <dd> Teilnahme an Scrum-Events</dd>
+                  </dl>
+                  </p>
+               </div>
+            </div> <!-- item end -->
+
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3> Qualitätsingenieur für EEE-Bauteile </h3>
+                  <p class="info">OHB System AG
+                     <span>&bull;</span> <em class="date">März 2017 - Mai 2019</em>
+                     <span>&bull;</span> <em class="date">Bremen</em>
+                  </p>
+                  <p>
+                  <dl class="dictionary-style">
+                     <dd> Ansprechpartner für EEE-Angelegenheiten intern und extern </dd>
+                     <dd> Genehmigung von Part Approval Documents (PAD) und Bauteillisten </dd>
+                     <dd> Durchführen und Nachbereitung von Part/Radiation Control Boards
+                        mit Lieferanten und Kunden (Reisetätigkeit)
+                     </dd>
+                     <dd> Koordination von Alerts </dd>
+                     <dd> Software-Konzeption, Datenbankdesign und Anwendertesten im Verbesserungsprojekt </dd>
+                     <dd> Sicherstellen der (Design)-Qualität (MIL, ESCC) im Satellitenprojekt </dd>
+                  </dl>
+                  </p>
+               </div>
+            </div> <!-- item end -->
+
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3>Prozessingenieur Technologietransfer/integration </h3>
+                  <p class="info">Vishay Siliconix Itzehoe GmbH
+                     <span>&bull;</span> <em class="date">Juli 2014 - Dezember 2016</em>
+                     <span>&bull;</span> <em class="date">Itzehoe</em>
+                  </p>
+                  <p>
+                  <dl class="dictionary-style">
+                     <dd> Transfer von neu entwickelten PowerMOS-Transistoren ins Werk Itzehoe </dd>
+                     <dd> Analyse von Prozessinstabilitäten (SPC) und Yield-Ausfällen
+                        anhand von Prozessparametern, MOSFET-Topologien sowie
+                        Ausgangsparametern des elektrischen Funktionstest </dd>
+                     <dd> Planung und Begleitung von zugehörigen Losen in der
+                        Fertigung sowie Versandvorbereitung </dd>
+                     <dd> Mitverantwortung von Epi-Qualifikationen bei externer Foundry </dd>
+                  </dl>
+                  </p>
+               </div>
+            </div> <!-- item end -->
+
+            <!--todo: Titel job title -->
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3>Design Assurance Quality Engineer &#8208 Aerospace</h3>
+                  <p class="info">Rockwell Collins Deutschland GmbH
+                     <span>&bull;</span> <em class="date">September 2013 - Juni 2014</em>
+                     <span>&bull;</span> <em class="date">Heidelberg</em>
+
+                  </p>
+                  <p>
+                  <dl class="dictionary-style">
+                     <dd> Unterstützung und Beratung des Engineerings hinsichtlich
+                        Design Assurance und Qualität </dd>
+                     <dd> Verifikation von Entwicklungsaktivitäten und Produkten </dd>
+                     <dd> Analyse von Risiken und deren Berurteilung, ggf. weitere Eskalation </dd>
+                  </dl>
+                  </p>
+
+                  <h3>Produktqualitätsingenieur &#8208 Raumfahrt</h3>
+                  <p class="info">Rockwell Collins Deutschland GmbH
+                     <span>&bull;</span> <em class="date">März 2010 - August 2013</em>
+                     <span>&bull;</span> <em class="date">Heidelberg</em>
+                  </p>
+                  <p>
+                  <dl class="dictionary-style">
+                     <dd> Produktsicherungs-Programm-Management für Raumfahrtgeräte </dd>
+                     <dd> Überwachung v. Produkt-/Prozessqualifikationen für EEE-Parts </dd>
+                     <dd> Bearbeitung von Kundenanfragen zur EEE-Bauteilqualifikation </dd>
+                     <dd> Mitarbeit in Lean-Projekten mit Erstellung v. EEE-Bauteillisten und PAD-DB </dd>
+                     <dd> Recherche v. eingebauten Bauteilen im Rahmen von Alerts </dd>
+                     <dd> Sicherstellen der Lieferantenqualität </dd>
+                     <dd> Kommunikation mit dem Kernlieferanten hinsichtlich Screening der HiRel-Bauteile </dd>
+                     <dd> Kooperation mit dem technischen Einkauf in der Bauteilbeschaffung </dd>
+                     <dd> interne und externe Reviews </dd>
+                     <dd> Verfolgung und 8D-systematische Bearbeitung von produktsicherungs-relevanten Action und
+                        Dokumentation in SAP-QM </dd>
+                     <dd> Bearbeitung von Nichtkonformitäten (NCR) und Close-Out Überwachung </dd>
+                     <dd> Kontrolle der ECSS/MIL-Standards </dd>
+                     <dd> Kontrolle programm- und projektspezifischer Kundenanforderungen für Satellitenkomponenten</dd>
+                     <dd> Weiterentwicklung der Part-Approval-Document-Datenbank für HiRel-Bauteile mit IT </dd>
+                     <dd> Abwicklung von Fehlermeldungen, Fehleruntersuchungen, Bauabweichungen
+                        und deren Durchsprache mit dem Kunden </dd>
+                     <dd> Prüfung und Freigabe interner Prozess- und Materialbeschaffungsspezifikationen </dd>
+                  </dl>
+                  </p>
+
+               </div>
+            </div> <!-- item end -->
+
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3> Projektingenieur - Product Assurance Space </h3>
+                  <p class="info"> Hays Temp GmbH
+                     <span>&bull;</span> <em class="date">September 2009 - Februar 2010</em>
+                     <span>&bull;</span> <em class="date">Heidelberg</em>
+                  </p>
+                  <p>
+                  <dl class="dictionary-style">
+                     <dd> Erstellen von Bauteillisten und Dokumentation zur Abnahme beim Kunden </dd>
+                     <dd> Prüfung und Aktualisierung von Part Approval Documents (PADs) für HiRel-Bauteile </dd>
+                     <dd> Produktsicherungsdokumentation für Review-Boards </dd>
+                  </dl>
+                  </p>
+               </div>
+            </div> <!-- item end -->
+
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3> Yield-Ingenieur </h3>
+                  <p class="info"> NXP Semiconductors Germany GmbH
+                     <span>&bull;</span> <em class="date">Juni 2007 - März 2009</em>
+                     <span>&bull;</span> <em class="date">Hamburg</em>
+                  </p>
+                  <p>
+                  <dl class="dictionary-style">
+                     <dd> Projektmitarbeit in multifunktionalen,
+                        internationalen Projekten zur
+                        Ausbeutesteigerung und Kostenreduktion
+                     </dd>
+                     <dd> Volume-Ramp-Up neuer Produkte und Herstellungstechnologien </dd>
+                     <dd> Analyse und Visualisierung von Yield- und Prozessdaten </dd>
+                     <dd> Datenaufbereitung, -analyse, Skriptprogrammierung </dd>
+                  </dl>
+                  </p>
+               </div>
+            </div> <!-- item end -->
+
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3> Luftfahrzeugelektroniker </h3>
+                  <p class="info"> Marinefliegergeschwader 5, Bundeswehr
+                     <span>&bull;</span> <em class="date">Mai 1999 - April 2002</em>
+                     <span>&bull;</span> <em class="date">Hamburg</em>
+                  </p>
+                  <p>
+                  <dl class="dictionary-style">
+                     <dd> Instandsetzung, Wartung und Überprüfung von Fernmeldeanlagen </dd>
+                     <dd> Mitarbeit in der Betriebsorganisation / Datenauswertung </dd>
+                  </dl>
+                  </p>
+               </div>
+            </div> <!-- item end -->
+
+         </div> <!-- main-col end -->
+
+      </div> <!-- End Work -->
+
+   </section> <!-- Resume Section End-->
+
+
+   <!-- Testimonials Section
+   ================================================== -->
+   <section id="testimonials">
+
+      <div class="text-container">
+
+         <div class="row">
+
+            <div class="two columns header-col">
+
+               <h1><span>Zitate</span></h1>
+
+            </div>
+
+            <div class="ten columns flex-container">
+
+               <div class="flexslider">
+
+                  <ul class="slides">
+
+                     <li>
+                        <blockquote>
+                           <p>Your work is going to fill a large part of your life, and the only way to be truly
+                              satisfied is
+                              to do what you believe is great work. And the only way to do great work is to love what
+                              you do.
+                              If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart,
+                              you'll know when you find it.
+                           </p>
+                           <cite>Steve Jobs</cite>
+                        </blockquote>
+                     </li> <!-- slide ends -->
+
+                     <li>
+                        <blockquote>
+                           <p>
+                              Das kalte Wasser wird nicht wärmer, wenn Du später reingehst.
+                           </p>
+                           <cite>Redensart</cite>
+                        </blockquote>
+                     </li> <!-- slide ends -->
+
+                     <li>
+                        <blockquote>
+                           <p> Willst Du Dich am Ganzen erquicken, so musst du auch das Ganze im Kleinsten erblicken.
+                           </p>
+                           <cite>Johann Wolfgang Goethe</cite>
+                        </blockquote>
+                     </li> <!-- slide ends -->
+
+                  </ul>
+
+               </div> <!-- div.flexslider ends -->
+
+            </div> <!-- div.flex-container ends -->
+
+         </div> <!-- row ends -->
+
+      </div> <!-- text-container ends -->
+
+   </section> <!-- Testimonials Section End-->
+
+
+
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+      <div class="row">
+
+         <div class="twelve columns">
+            <ul class="copyright">
+               <li>&copy; Copyright 2024 Patrick Schauer, All rights reserved.</li>
+               <li><a href="./imprint.html" title="Styleshout" target="_blank">Impressum</a></li>
+               <li><a href="./privacyPolicy.html" title="Styleshout" target="_blank">Datenschutzerklärung</a></li>
+            </ul>
+         </div>
+
+         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a>
+         </div>
+
+      </div>
+
+   </footer> <!-- Footer End-->
+
+
+
+   <!-- Java Script 
+   ================================================== -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+
+   <script src="js/jquery.flexslider.js"></script>
+   <script src="js/waypoints.js"></script>
+   <script src="js/jquery.fittext.js"></script>
+   <script src="js/magnific-popup.js"></script>
+   <script src="js/init.js"></script>
+
+   <script>
+
+      document.querySelector('.button').addEventListener('click', () => {
+         const { jsPDF } = window.jspdf;
+
+         const pdf = new jsPDF({
+            orientation: 'portrait',
+         });
+
+         // Array of scrollY values for page breaks
+         const pageBreaks = [0, 1930, 3665, 5570, 7470];
+
+         // Function to capture and add a segment to the PDF
+         const captureSegment = async (scrollY, pageIndex, isLastPage) => {
+            window.scrollTo(0, scrollY);
+
+            // Hide the download button
+            const downloadDiv = document.querySelector('.columns.download');
+            if (downloadDiv) {
+               downloadDiv.style.display = 'none';
+            }
+
+            const aElements = document.querySelectorAll('.flex-control-nav.flex-control-paging a');
+            aElements.forEach(a => a.style.display = 'none');
+
+            await new Promise(resolve => setTimeout(resolve, 1000));
+
+            return html2canvas(document.body, {
+               scale: 2, // Lower scale to reduce resolution
+               height: isLastPage ? undefined : pageBreaks[pageIndex + 1] - scrollY,
+               y: scrollY
+            }).then(canvas => {
+               const imgData = canvas.toDataURL('image/jpeg'); // JPEG format with reduced quality
+               const imgProps = pdf.getImageProperties(imgData);
+               const pdfWidth = pdf.internal.pageSize.getWidth();
+               const scaledPdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+
+               const marginTop = pageIndex === 0 ? 0 : 10; // Add margin top for all pages except the first
+
+               if (pageIndex > 0) {
+                  pdf.addPage();
+               }
+               pdf.addImage(imgData, 'JPEG', 0, marginTop, pdfWidth, scaledPdfHeight);
+
+               // Adding hyperlinks
+               pdf.link(90, 30, 20, 20, { url: 'https://www.xing.com/profile/Patrick_Schauer4/web_profiles?expandNeffi=true' });
+               pdf.link(100, 30, 20, 20, { url: 'https://www.linkedin.com/in/patrick-schauer-5a369322a/' });
+               pdf.link(110, 30, 20, 20, { url: 'https://github.com/Patshakeitout?tab=repositories' });
+
+            });
+         };
+
+         // Function to iterate through the page breaks and create the PDF
+         const createPDF = async () => {
+            for (let pageIndex = 0; pageIndex < pageBreaks.length; pageIndex++) {
+               const isLastPage = pageIndex === pageBreaks.length - 1;
+               await captureSegment(pageBreaks[pageIndex], pageIndex, isLastPage);
+            }
+            pdf.save('Lebenslauf_PSchauer.pdf');
+         };
+
+         createPDF();
+      });
+
+   </script>
 
 </body>
 
